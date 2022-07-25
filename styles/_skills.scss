@@ -1,0 +1,18 @@
+#skills {
+    height: 200px;
+
+    h2 {
+        font-size: 3.5rem;
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    .skills-info {
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 14rem;
+        color: #010326;
+    }
+}
