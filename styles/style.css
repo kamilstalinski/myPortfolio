@@ -279,16 +279,17 @@ header .hero .arrow-container:hover {
   justify-content: center;
   -ms-scroll-snap-type: multiply;
       scroll-snap-type: multiply;
+  margin-top: 8rem;
 }
 #about .img {
   position: relative;
   width: 50%;
   height: 800px;
-  overflow: hidden;
   background-image: url("/img/_DSC4376.JPG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 1000;
 }
 #about .img::after {
   content: "";
@@ -299,7 +300,17 @@ header .hero .arrow-container:hover {
   width: 100px;
   transform: translateX(50%) rotate(45deg);
   background-color: #ffffff;
-  z-index: 1;
+  z-index: 2;
+}
+#about .img::before {
+  content: "";
+  position: absolute;
+  top: -5%;
+  right: 5%;
+  left: -5%;
+  bottom: 5%;
+  background: rgba(148, 198, 242, 0.2);
+  z-index: -110;
 }
 #about .about-me {
   position: relative;
@@ -309,27 +320,6 @@ header .hero .arrow-container:hover {
   justify-content: space-around;
   padding: 50px;
   z-index: 111;
-}
-#about .about-me::after {
-  content: "";
-  position: absolute;
-  left: 30%;
-  top: 0;
-  right: 0;
-  height: 100%;
-  background-color: #F2F2F2;
-  z-index: -3;
-}
-#about .about-me::before {
-  content: "";
-  position: absolute;
-  left: 30%;
-  top: 45%;
-  height: 200px;
-  width: 200px;
-  transform: translateX(-50%) rotate(45deg);
-  background-color: #F2F2F2;
-  z-index: -1;
 }
 #about .about-me h1 {
   font-size: 6rem;
