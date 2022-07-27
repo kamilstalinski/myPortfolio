@@ -24,7 +24,7 @@
             width: 100px;
             transform: translateX(50%) rotate(45deg);
             background-color: #ffffff;
-            z-index: 2;
+            z-index: -1;
         }
 
         &::before {
@@ -128,6 +128,8 @@
                 transform: translateY(-5px);
             }
         }
+
+        .social-cta {}
 
     }
 }

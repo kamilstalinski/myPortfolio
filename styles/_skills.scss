@@ -1,18 +1,36 @@
 #skills {
-    height: 200px;
+    height: auto;
+    background-color: rgba(1, 11, 64, 0.6);
+    padding: 4rem;
 
     h2 {
         font-size: 3.5rem;
-        text-align: center;
-        margin-top: 3rem;
+        font-weight: 400;
+        margin-right: 1.5rem;
+    }
+
+    i {
+        font-size: 4.5rem;
     }
 
     .skills-info {
         height: 100%;
+        gap: 1.5rem;
         display: flex;
-        justify-content: space-around;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
         align-items: center;
-        font-size: 14rem;
-        color: #010326;
+        color: #F2F2F2;
     }
+
+    .skill-item {
+        padding: 0 2rem;
+        display: flex;
+        flex-basis: 15%;
+        justify-content: center;
+        align-items: center;
+        color: #F2F2F2;
+    }
+
+
 }

@@ -22,10 +22,10 @@ header {
         align-items: center;
         height: 100px;
         z-index: 111111;
-        transition: 0.2s;
+        transition: .3s;
 
         &.sticky {
-            background-color: #fff;
+            background-color: #F2F2F2;
             height: 80px;
             box-shadow: 0 3px 5px rgb(195, 195, 195);
         }
