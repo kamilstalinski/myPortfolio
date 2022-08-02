@@ -413,7 +413,7 @@ header .hero .arrow-container:hover {
 }
 @media (max-width: 600px) {
   #about {
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
   #about .img {
     display: none;
@@ -438,11 +438,11 @@ header .hero .arrow-container:hover {
   #about .about-me .about-info ul.data {
     margin: 0;
   }
-  #about .about-cta button {
+  #about .about-me .about-cta button {
     width: 150px;
     height: 50px;
   }
-  #about .about-cta button a {
+  #about .about-me .about-cta button a {
     line-height: 50px;
     font-size: 1.2rem;
   }
