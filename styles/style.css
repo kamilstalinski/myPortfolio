@@ -89,7 +89,7 @@ header .navbar #close {
   display: none;
   z-index: 10;
 }
-@media screen and (max-width: 992px) {
+@media (max-width: 992px) {
   header .navbar .navbar-items {
     padding: 10%;
     flex-direction: column;
@@ -254,7 +254,7 @@ header .hero .arrow-container i {
 header .hero .arrow-container:hover {
   background-color: #94C6F2;
 }
-@media screen and (max-width: 992px) {
+@media (max-width: 992px) {
   header .hero p {
     font-size: 1.8rem;
   }
@@ -265,12 +265,12 @@ header .hero .arrow-container:hover {
     font-size: 2.8rem;
   }
 }
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   header .hero p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
   header .hero h1 {
-    font-size: 5rem;
+    font-size: 4.8rem;
   }
   header .hero h2 {
     font-size: 2.4rem;
@@ -412,6 +412,9 @@ header .hero .arrow-container:hover {
   }
 }
 @media (max-width: 600px) {
+  #about {
+    margin-top: 4rem;
+  }
   #about .img {
     display: none;
   }
@@ -424,15 +427,24 @@ header .hero .arrow-container:hover {
   }
   #about .about-me p {
     text-align: center;
+    padding: 0 1rem;
   }
   #about .about-me .about-info {
-    justify-content: space-between;
+    justify-content: space-around;
   }
   #about .about-me .about-info ul li {
     font-size: 1.5rem;
   }
   #about .about-me .about-info ul.data {
     margin: 0;
+  }
+  #about .about-cta button {
+    width: 150px;
+    height: 50px;
+  }
+  #about .about-cta button a {
+    line-height: 50px;
+    font-size: 1.2rem;
   }
 }
 
