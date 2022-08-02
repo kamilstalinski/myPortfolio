@@ -1,17 +1,10 @@
 #skills {
     height: auto;
-    background-color: rgba(1, 11, 64, 0.6);
-    padding: 4rem;
-
-    h2 {
-        font-size: 3.5rem;
-        font-weight: 400;
-        margin-right: 1.5rem;
-    }
-
-    i {
-        font-size: 4.5rem;
-    }
+    background-color: #F2F2F2;
+    padding: 2rem 4rem;
+    margin: 4rem 0;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 
     .skills-info {
         height: 100%;
@@ -29,7 +22,18 @@
         flex-basis: 15%;
         justify-content: center;
         align-items: center;
-        color: #F2F2F2;
+        color: #010B40;
+
+        h2 {
+            font-size: 3rem;
+            font-weight: 400;
+            margin-right: 1.5rem;
+        }
+
+        i {
+            font-size: 4.5rem;
+            color: #94C6F2;
+        }
     }
 
 

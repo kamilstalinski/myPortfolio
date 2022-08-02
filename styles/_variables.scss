@@ -1,0 +1,11 @@
+/** Colors **/
+$light-yellow: #F2EEAC;
+$light-blue: #94C6F2;
+
+
+/**Breakpoints**/
+$breakpoints: (
+    'small': (max-width: 600px),
+    'medium': (max-width: 992px),
+    'large': (max-width: 1200px),
+    )

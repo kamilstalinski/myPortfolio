@@ -7,7 +7,7 @@ hamburger.addEventListener('click', () => {
 })
 
 window.addEventListener('scroll', () => {
-    navbar.classList.toggle('sticky', window.scrollY > 100);
+    navbar.classList.toggle('sticky', window.scrollY > 0);
 })
 
 
