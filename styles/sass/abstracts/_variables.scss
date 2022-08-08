@@ -1,0 +1,14 @@
+/** Colors **/
+$primary-color: #E65c4f;
+$secondary-color: #326789;
+$background-color: #78a6c8;
+$additional-color: #e9eef2;
+
+
+
+/**Breakpoints**/
+$breakpoints: (
+    'small': (max-width: 600px),
+    'medium': (max-width: 992px),
+    'large': (max-width: 1200px),
+    )

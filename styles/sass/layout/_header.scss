@@ -1,0 +1,263 @@
+header {
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: '';
+        width: 50%;
+        background-color: $background-color;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        z-index: 111111;
+        transition: .3s;
+
+        &.sticky {
+            background-color: #fff;
+            height: 80px;
+            box-shadow: 0 2px 0px $additional-color;
+        }
+
+
+
+        .navbar-logo img {
+            width: 60px;
+        }
+
+        .navbar-items {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            width: 45%;
+            // height: 100%;
+
+            li {
+                height: inherit;
+                // line-height: 100px;
+
+                a {
+                    position: relative;
+                    height: 100%;
+                    display: inline-block;
+                    font-size: 1.8rem;
+                    color: #010B40;
+                    text-decoration: none;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    cursor: pointer;
+
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+                        width: 0;
+                        height: 3px;
+                        background-color: $primary-color;
+                        transition: width .2s ease-in;
+                    }
+
+                    &:hover::after,
+                    &:focus::after,
+                    &:active::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        #hamburger,
+        #close {
+            font-size: 2.6rem;
+            display: none;
+            z-index: 10;
+        }
+
+        @include size('medium') {
+            .navbar-items {
+                padding: 10%;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 3rem;
+                background-color: $primary-color;
+                position: absolute;
+                top: 0;
+                right: -100%;
+                z-index: 1;
+                width: 80vw;
+                height: 100vh;
+                transition: right .3s ease-in-out;
+
+                li {
+                    height: 50px;
+
+                    a {
+                        font-size: 2.2rem;
+                    }
+                }
+
+                &.active {
+                    right: 0;
+                }
+            }
+
+            #hamburger {
+                display: block;
+            }
+        }
+
+    }
+
+    .hero {
+        height: calc(100vh);
+        transform: translateY(-100px);
+        padding: 0 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        letter-spacing: 2px;
+        text-align: center;
+
+        p {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: $primary-color;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            // text-transform: uppercase;
+            font-size: 7rem;
+            color: #010326;
+        }
+
+        h2 {
+            font-size: 3.5rem;
+            color: #010326;
+
+            span {
+                color: $primary-color;
+
+            }
+        }
+
+        .arrow-container {
+            position: absolute;
+            bottom: 10%;
+            height: 80px;
+            width: 80px;
+            transform: rotate(45deg);
+            background-color: $background-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color .2s ease-in-out;
+
+            i {
+                font-size: 2.2rem;
+                transform: rotate(-45deg);
+                animation: myAnim 2s ease-in-out infinite normal backwards;
+
+                @keyframes myAnim {
+                    0% {
+                        animation-timing-function: ease-in;
+                        opacity: 0;
+                        transform: rotate(-45deg) translateY(-45px);
+                    }
+
+                    24% {
+                        opacity: 1;
+                    }
+
+                    40% {
+                        animation-timing-function: ease-in;
+                        transform: rotate(-45deg) translateY(-24px);
+                    }
+
+                    65% {
+                        animation-timing-function: ease-in;
+                        transform: rotate(-45deg) translateY(-12px);
+                    }
+
+                    82% {
+                        animation-timing-function: ease-in;
+                        transform: rotate(-45deg) translateY(-6px);
+                    }
+
+                    93% {
+                        animation-timing-function: ease-in;
+                        transform: rotate(-45deg) translateY(-4px);
+                    }
+
+                    25%,
+                    55%,
+                    75%,
+                    87% {
+                        animation-timing-function: ease-out;
+                        transform: rotate(-45deg) translateY(0px);
+                    }
+
+                    100% {
+                        animation-timing-function: ease-out;
+                        opacity: 1;
+                        transform: rotate(-45deg) translateY(0px);
+                    }
+                }
+            }
+
+            &:hover {
+                background-color: $primary-color;
+            }
+
+
+        }
+
+        @include size('medium') {
+            p {
+                font-size: 1.8rem;
+            }
+
+            h1 {
+                font-size: 6rem;
+            }
+
+            h2 {
+                font-size: 2.8rem;
+            }
+
+        }
+
+        @include size('small') {
+            p {
+                font-size: 1.6rem;
+            }
+
+            h1 {
+                font-size: 4.8rem;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+        }
+    }
+
+}

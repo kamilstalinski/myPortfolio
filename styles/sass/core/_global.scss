@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Noto Sans', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth
+}
+
+body {
+    background-color: $additional-color;
+}
+
+.container {
+    max-width: 1360px;
+    margin: 0 auto;
+}
