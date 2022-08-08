@@ -40,6 +40,10 @@
 
         @include size('medium') {
             width: 20%;
+
+            i {
+                font-size: 5rem;
+            }
         }
     }
 
