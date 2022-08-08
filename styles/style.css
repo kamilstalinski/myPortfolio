@@ -22,6 +22,10 @@ body {
   margin: 0 auto;
 }
 
+h1 {
+  font-size: 6rem;
+}
+
 header .background {
   position: absolute;
   top: 0;
@@ -321,8 +325,12 @@ header .hero .arrow-container:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 50px;
+  margin: 4rem;
+  padding: 3rem;
   z-index: 111;
+  background-color: #fff;
+  border-radius: 3rem 0 3rem 3rem;
+  box-shadow: 0 3px 5px #ddd;
 }
 #about .about-me h1 {
   font-size: 6rem;
@@ -485,8 +493,7 @@ header .hero .arrow-container:hover {
   background-color: #fff;
   padding: 2rem 4rem;
   margin: 4rem 0;
-  border-top-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  box-shadow: 0 3px 5px #ddd;
 }
 #skills .skills-info {
   height: 100%;
@@ -525,4 +532,36 @@ header .hero .arrow-container:hover {
   #skills .skill-item i {
     font-size: 5rem;
   }
+}
+
+#projects {
+  background-color: #326789;
+  width: 100vw;
+  color: #e9eef2;
+  padding: 2rem 0;
+}
+#projects h1 {
+  text-align: center;
+  position: relative;
+}
+#projects h1::after {
+  content: "";
+  position: absolute;
+  bottom: -5%;
+  right: 30%;
+  left: 30%;
+  height: 5px;
+  background-color: #E65c4f;
+}
+#projects .projects-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+#projects .projects-container .project-item {
+  width: 30rem;
+  height: 30rem;
+  background: #fff;
+  box-shadow: 0 3px 5px rgb(8, 36, 105);
 }/*# sourceMappingURL=style.css.map */
