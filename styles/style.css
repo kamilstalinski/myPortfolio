@@ -15,6 +15,7 @@ html {
 
 body {
   background-color: #e9eef2;
+  color: #010326;
 }
 
 .container {
@@ -24,6 +25,11 @@ body {
 
 h1 {
   font-size: 6rem;
+}
+
+h1,
+h2 {
+  color: #010326;
 }
 
 header .background {
@@ -292,12 +298,13 @@ header .hero .arrow-container:hover {
 #about .img {
   position: relative;
   width: 50%;
-  height: 700px;
+  height: 900px;
   background-image: url("/img/_DSC5212.JPG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+  border-bottom-left-radius: 30px;
 }
 #about .img::after {
   content: "";
@@ -325,28 +332,15 @@ header .hero .arrow-container:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin: 4rem;
-  padding: 3rem;
-  z-index: 111;
-  background-color: #fff;
+  padding: 5rem;
+  z-index: 11221;
   border-radius: 3rem 0 3rem 3rem;
-  box-shadow: 0 3px 5px #ddd;
 }
 #about .about-me h1 {
   font-size: 6rem;
   font-weight: 700;
   color: #010B40;
   position: relative;
-}
-#about .about-me h1::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 5px;
-  width: 60%;
-  background-color: #E65c4f;
 }
 #about .about-me p {
   font-size: 2rem;
@@ -490,10 +484,9 @@ header .hero .arrow-container:hover {
 
 #skills {
   height: auto;
-  background-color: #fff;
+  background-color: #326789;
   padding: 2rem 4rem;
   margin: 4rem 0;
-  box-shadow: 0 3px 5px #ddd;
 }
 #skills .skills-info {
   height: 100%;
@@ -523,7 +516,12 @@ header .hero .arrow-container:hover {
 }
 #skills .skill-item i {
   font-size: 7rem;
+  color: #e9eef2;
+  transition: 0.2s;
+}
+#skills .skill-item i:hover {
   color: #E65c4f;
+  transform: scale(1.2);
 }
 @media (max-width: 992px) {
   #skills .skill-item {
@@ -535,33 +533,69 @@ header .hero .arrow-container:hover {
 }
 
 #projects {
-  background-color: #326789;
+  background-color: #fff;
   width: 100vw;
   color: #e9eef2;
   padding: 2rem 0;
+  margin-bottom: 4rem;
 }
 #projects h1 {
   text-align: center;
   position: relative;
 }
-#projects h1::after {
-  content: "";
-  position: absolute;
-  bottom: -5%;
-  right: 30%;
-  left: 30%;
-  height: 5px;
-  background-color: #E65c4f;
-}
 #projects .projects-container {
   display: flex;
   justify-content: space-around;
+  gap: 1.5rem;
   padding: 2rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
 }
 #projects .projects-container .project-item {
   width: 30rem;
   height: 30rem;
-  background: #fff;
-  box-shadow: 0 3px 5px rgb(8, 36, 105);
+  background: #ddd;
+  box-shadow: 0 3px 5px rgb(181, 181, 181);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#projects .projects-container .project-item h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+#projects .projects-container .project-item .buttons-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+#projects .projects-container .project-item .buttons-container .live {
+  margin-right: 1rem;
+}
+#projects .projects-container .project-item .buttons-container button {
+  border: none;
+  background-color: #E65c4f;
+  padding: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#projects .projects-container .project-item .buttons-container button:hover {
+  background-color: #326789;
+}
+#projects .projects-container .project-item .buttons-container button:hover i {
+  color: #e9eef2;
+}
+#projects .projects-container .project-item .buttons-container button i {
+  color: #326789;
+  font-size: 2rem;
+}
+@media (max-width: 992px) {
+  #projects .projects-container .project-item {
+    width: 25rem;
+    height: 25rem;
+  }
+  #projects .projects-container .project-item h2 {
+    font-size: 2.2rem;
+  }
 }/*# sourceMappingURL=style.css.map */

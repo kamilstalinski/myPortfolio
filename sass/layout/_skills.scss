@@ -1,9 +1,9 @@
 #skills {
     height: auto;
-    background-color: #fff;
+    background-color: $secondary-color;
     padding: 2rem 4rem;
     margin: 4rem 0;
-    box-shadow: 0 3px 5px #ddd;
+    // box-shadow: 0 3px 5px #ddd;
 
     .skills-info {
         height: 100%;
@@ -34,7 +34,13 @@
 
         i {
             font-size: 7rem;
-            color: $primary-color;
+            color: $additional-color;
+            transition: .2s;
+
+            &:hover {
+                color: $primary-color;
+                transform: scale(1.2);
+            }
         }
 
         @include size('medium') {

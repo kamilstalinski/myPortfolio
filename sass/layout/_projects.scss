@@ -1,35 +1,80 @@
 #projects {
-    background-color: $secondary-color;
+    background-color: #fff;
     width: 100vw;
     color: $additional-color;
     padding: 2rem 0;
+    margin-bottom: 4rem;
 
     h1 {
         text-align: center;
         position: relative;
 
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -5%;
-            right: 30%;
-            left: 30%;
-            height: 5px;
-            background-color: $primary-color;
-        }
     }
 
     .projects-container {
         display: flex;
         justify-content: space-around;
+        gap: 1.5rem;
         padding: 2rem;
         margin-top: 2rem;
+        flex-wrap: wrap;
 
         .project-item {
             width: 30rem;
             height: 30rem;
-            background: #fff;
-            box-shadow: 0 3px 5px rgb(8, 36, 105);
+            background: #ddd;
+            box-shadow: 0 3px 5px rgb(181, 181, 181);
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+
+            h2 {
+                font-size: 3rem;
+                text-align: center;
+            }
+
+            .buttons-container {
+                text-align: center;
+                margin-top: 2rem;
+
+                .live {
+                    margin-right: 1rem;
+                }
+
+                button {
+                    border: none;
+                    background-color: $primary-color;
+                    padding: 1.5rem;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: .2s;
+
+                    &:hover {
+                        background-color: $secondary-color;
+
+                        i {
+                            color: $additional-color;
+                        }
+                    }
+
+                    i {
+                        color: $secondary-color;
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            @include size('medium') {
+                width: 25rem;
+                height: 25rem;
+
+                h2 {
+                    font-size: 2.2rem;
+                }
+            }
         }
     }
 }
