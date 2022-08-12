@@ -23,6 +23,7 @@
     h2 {
         font-size: 4rem;
         padding: 2rem;
+        text-align: start;
     }
 
     form {
@@ -98,10 +99,96 @@
         }
 
         .background {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100%;
             width: 50%;
-            background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(2) rotate(50)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(207, 26%, 93%, 1)'/><path d='M-4.798 13.573C-3.149 12.533-1.446 11.306 0 10c2.812-2.758 6.18-4.974 10-5 4.183.336 7.193 2.456 10 5 2.86 2.687 6.216 4.952 10 5 4.185-.315 7.35-2.48 10-5 1.452-1.386 3.107-3.085 4.793-4.176'  stroke-width='3' stroke='hsla(203, 47%, 37%, 1)' fill='none'/><path d='M-4.798 33.573C-3.149 32.533-1.446 31.306 0 30c2.812-2.758 6.18-4.974 10-5 4.183.336 7.193 2.456 10 5 2.86 2.687 6.216 4.952 10 5 4.185-.315 7.35-2.48 10-5 1.452-1.386 3.107-3.085 4.793-4.176'  stroke-width='3' stroke='hsla(5, 75%, 61%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
-            border-radius: 3rem 0 0 3rem
+            background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(3) rotate(50)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(207, 26%, 93%, 1)'/><path d='M-4.798 13.573C-3.149 12.533-1.446 11.306 0 10c2.812-2.758 6.18-4.974 10-5 4.183.336 7.193 2.456 10 5 2.86 2.687 6.216 4.952 10 5 4.185-.315 7.35-2.48 10-5 1.452-1.386 3.107-3.085 4.793-4.176'  stroke-width='3' stroke='hsla(203, 47%, 37%, 1)' fill='none'/><path d='M-4.798 33.573C-3.149 32.533-1.446 31.306 0 30c2.812-2.758 6.18-4.974 10-5 4.183.336 7.193 2.456 10 5 2.86 2.687 6.216 4.952 10 5 4.185-.315 7.35-2.48 10-5 1.452-1.386 3.107-3.085 4.793-4.176'  stroke-width='3' stroke='hsla(5, 75%, 61%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+            border-radius: 3rem 0 0 3rem;
+
+            .message {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 20rem;
+                height: 20rem;
+                background-color: #fff;
+                border-radius: 3rem;
+
+                i {
+                    font-size: 8rem;
+                    color: $secondary-color;
+                    animation: wiggle 2s linear infinite;
+
+                    @keyframes wiggle {
+
+                        0%,
+                        7% {
+                            transform: rotateZ(0);
+                        }
+
+                        15% {
+                            transform: rotateZ(-15deg);
+                        }
+
+                        20% {
+                            transform: rotateZ(10deg);
+                        }
+
+                        25% {
+                            transform: rotateZ(-10deg);
+                        }
+
+                        30% {
+                            transform: rotateZ(6deg);
+                        }
+
+                        35% {
+                            transform: rotateZ(-4deg);
+                        }
+
+                        40%,
+                        100% {
+                            transform: rotateZ(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include size('small') {
+
+        form {
+            width: 100vw;
+            height: 100vh;
+            margin-bottom: 4rem;
+            overflow: auto;
+
+            .details {
+                z-index: 2222;
+                position: absolute;
+                width: 90%;
+                top: 40%;
+                border-radius: 3rem;
+            }
+
+            .background {
+                position: relative;
+                width: 100vw;
+                align-items: flex-start;
+
+                .message {
+                    margin: 3rem;
+                    width: 15rem;
+                    height: 10rem;
+
+                    i {
+                        font-size: 6rem;
+                    }
+                }
+            }
         }
     }
 }
