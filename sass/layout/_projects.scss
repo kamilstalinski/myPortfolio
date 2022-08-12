@@ -2,8 +2,9 @@
     background-color: #fff;
     padding: 2rem 0 4rem 0;
 
-    h2 {
-        margin-bottom: 2rem;
+    h1 {
+        margin-bottom: 4rem;
+        text-align: center;
     }
 
 
@@ -21,14 +22,26 @@
             align-items: center;
 
             .project-item {
+                position: relative;
                 width: 30rem;
                 height: 30rem;
                 background-color: #ddd;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                border-radius: 3rem;
+
 
                 img {
-                    width: 50%;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
 
+                .project-item-details {
+                    position: absolute;
+                }
             }
         }
 
