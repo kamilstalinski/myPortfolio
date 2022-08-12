@@ -48,9 +48,6 @@ header .navbar {
   left: 0;
   right: 0;
   padding: 0 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 100px;
   z-index: 111111;
   transition: 0.3s;
@@ -60,20 +57,26 @@ header .navbar.sticky {
   height: 80px;
   box-shadow: 0 2px 0px #e9eef2;
 }
-header .navbar .navbar-logo img {
+header .navbar div {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .navbar div .navbar-logo img {
   width: 60px;
 }
-header .navbar .navbar-items {
+header .navbar div .navbar-items {
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
   width: 45%;
 }
-header .navbar .navbar-items li {
+header .navbar div .navbar-items li {
   height: inherit;
 }
-header .navbar .navbar-items li a {
+header .navbar div .navbar-items li a {
   position: relative;
   height: 100%;
   display: inline-block;
@@ -84,7 +87,7 @@ header .navbar .navbar-items li a {
   text-transform: uppercase;
   cursor: pointer;
 }
-header .navbar .navbar-items li a::after {
+header .navbar div .navbar-items li a::after {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -94,7 +97,7 @@ header .navbar .navbar-items li a::after {
   background-color: #E65c4f;
   transition: width 0.2s ease-in;
 }
-header .navbar .navbar-items li a:hover::after, header .navbar .navbar-items li a:focus::after, header .navbar .navbar-items li a:active::after {
+header .navbar div .navbar-items li a:hover::after, header .navbar div .navbar-items li a:focus::after, header .navbar div .navbar-items li a:active::after {
   width: 100%;
 }
 header .navbar #hamburger,
@@ -298,7 +301,7 @@ header .hero .arrow-container:hover {
 #about .img {
   position: relative;
   width: 50%;
-  height: 900px;
+  height: 800px;
   background-image: url("/img/_DSC5212.JPG");
   background-size: cover;
   background-position: center;
@@ -341,6 +344,15 @@ header .hero .arrow-container:hover {
   font-weight: 700;
   color: #010B40;
   position: relative;
+}
+#about .about-me h1::before {
+  content: "";
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #E65c4f;
 }
 #about .about-me p {
   font-size: 2rem;
@@ -538,6 +550,7 @@ header .hero .arrow-container:hover {
   color: #e9eef2;
   padding: 2rem 0;
   margin-bottom: 4rem;
+  margin: 0 auto;
 }
 #projects h1 {
   text-align: center;
@@ -554,25 +567,39 @@ header .hero .arrow-container:hover {
 #projects .projects-container .project-item {
   width: 30rem;
   height: 30rem;
-  background: #ddd;
-  box-shadow: 0 3px 5px rgb(181, 181, 181);
-  border-radius: 30px;
+  background: url("/img/25501.jpg");
+  background-position: center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.2s;
+  border-radius: 3rem;
 }
-#projects .projects-container .project-item h2 {
+#projects .projects-container .project-item .project-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 103, 137, 0.6);
+  opacity: 0;
+  transition: opacity 0.2s;
+  border-radius: 3rem;
+}
+#projects .projects-container .project-item .project-details h2 {
   font-size: 3rem;
   text-align: center;
 }
-#projects .projects-container .project-item .buttons-container {
+#projects .projects-container .project-item .project-details .buttons-container {
   text-align: center;
   margin-top: 2rem;
 }
-#projects .projects-container .project-item .buttons-container .live {
+#projects .projects-container .project-item .project-details .buttons-container .live {
   margin-right: 1rem;
 }
-#projects .projects-container .project-item .buttons-container button {
+#projects .projects-container .project-item .project-details .buttons-container button {
   border: none;
   background-color: #E65c4f;
   padding: 1.5rem;
@@ -580,15 +607,21 @@ header .hero .arrow-container:hover {
   cursor: pointer;
   transition: 0.2s;
 }
-#projects .projects-container .project-item .buttons-container button:hover {
+#projects .projects-container .project-item .project-details .buttons-container button:hover {
   background-color: #326789;
 }
-#projects .projects-container .project-item .buttons-container button:hover i {
+#projects .projects-container .project-item .project-details .buttons-container button:hover i {
   color: #e9eef2;
 }
-#projects .projects-container .project-item .buttons-container button i {
+#projects .projects-container .project-item .project-details .buttons-container button i {
   color: #326789;
   font-size: 2rem;
+}
+#projects .projects-container .project-item:hover {
+  transform: translateY(-5px);
+}
+#projects .projects-container .project-item:hover .project-details {
+  opacity: 1;
 }
 @media (max-width: 992px) {
   #projects .projects-container .project-item {
@@ -598,4 +631,95 @@ header .hero .arrow-container:hover {
   #projects .projects-container .project-item h2 {
     font-size: 2.2rem;
   }
+}
+
+#contact {
+  position: relative;
+  height: 70rem;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+#contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15rem;
+  height: 15rem;
+  background-color: #326789;
+  transform: translate(50%, -50%) rotate(45deg);
+}
+#contact h2 {
+  font-size: 4rem;
+  padding: 2rem;
+}
+#contact form {
+  height: 50rem;
+  width: 85%;
+  display: flex;
+  flex-direction: row-reverse;
+  border-radius: 3rem;
+  justify-content: center;
+}
+#contact form .details {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: #E65c4f;
+  padding: 4rem;
+  border-radius: 0 3rem 3rem 0;
+}
+#contact form .details .details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#contact form .details .details-container input {
+  display: inline-block;
+  width: 100%;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  outline: none;
+}
+#contact form .details .details-container label {
+  color: #fff;
+  font-size: 1.6rem;
+}
+#contact form .details .textarea {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+  width: 100%;
+}
+#contact form .details .textarea textarea {
+  height: 100%;
+  border: none;
+  resize: none;
+  outline: none;
+  padding: 2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+}
+#contact form .details .textarea button {
+  width: 15rem;
+  font-size: 1.6rem;
+  padding: 1.5rem 3rem;
+  align-self: flex-end;
+  color: #fff;
+  background-color: #326789;
+  border: none;
+}
+#contact form .background {
+  height: 100%;
+  width: 50%;
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(2) rotate(50)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(207, 26%, 93%, 1)'/><path d='M-4.798 13.573C-3.149 12.533-1.446 11.306 0 10c2.812-2.758 6.18-4.974 10-5 4.183.336 7.193 2.456 10 5 2.86 2.687 6.216 4.952 10 5 4.185-.315 7.35-2.48 10-5 1.452-1.386 3.107-3.085 4.793-4.176'  stroke-width='3' stroke='hsla(203, 47%, 37%, 1)' fill='none'/><path d='M-4.798 33.573C-3.149 32.533-1.446 31.306 0 30c2.812-2.758 6.18-4.974 10-5 4.183.336 7.193 2.456 10 5 2.86 2.687 6.216 4.952 10 5 4.185-.315 7.35-2.48 10-5 1.452-1.386 3.107-3.085 4.793-4.176'  stroke-width='3' stroke='hsla(5, 75%, 61%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+  border-radius: 3rem 0 0 3rem;
 }/*# sourceMappingURL=style.css.map */

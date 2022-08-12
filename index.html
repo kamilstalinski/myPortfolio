@@ -16,20 +16,22 @@
 </head>
 
 <body>
-    <header id="home" class="container">
+    <header id="home">
         <div class="background"></div>
-        <nav class="navbar container">
-            <div class="navbar-logo">
-                <img src="/img/Slogo.svg" alt="logo">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-logo">
+                    <img src="/img/Slogo.svg" alt="logo">
+                </div>
+                <ul class="navbar-items">
+                    <li class="navbar-item"><a href="#home">Home</a></li>
+                    <li class="navbar-item"><a href="#about">About</a></li>
+                    <li class="navbar-item"><a href="#">Projects</a></li>
+                    <li class="navbar-item"><a href="#">Contact</a></li>
+                </ul>
+                <i id="hamburger" class="fa-solid fa-bars"></i>
+                <i id="close" class="fa-solid fa-xmark"></i>
             </div>
-            <ul class="navbar-items">
-                <li class="navbar-item"><a href="#home">Home</a></li>
-                <li class="navbar-item"><a href="#about">About</a></li>
-                <li class="navbar-item"><a href="#">Projects</a></li>
-                <li class="navbar-item"><a href="#">Contact</a></li>
-            </ul>
-            <i id="hamburger" class="fa-solid fa-bars"></i>
-            <i id="close" class="fa-solid fa-xmark"></i>
         </nav>
         <section class="hero">
             <p>Hello! I am</p>
@@ -45,7 +47,6 @@
             <div class="img"></div>
             <div class="about-me">
                 <h1>About Me</h1>
-                <div class="pattern"></div>
                 <p>I am Kamil, I build good-looking, responsive websites and applications. Hobbyist DJ, music producer
                     and electronic music lover. Currently a cabin crew member.
                 </p>
@@ -110,48 +111,76 @@
             </div>
         </section>
         <section id="projects">
-            <h1>My Projects</h1>
-            <div class="projects-container">
-                <div class="project-item">
-                    <div class="project-details">
-                        <h2>Weather App</h2>
-                        <div class="buttons-container">
-                            <button class="live"><i class="fa-solid fa-eye"></i></button>
-                            <button class="code"><i class="fa-solid fa-code"></i></button>
+            <div class="container">
+                <h1>My Projects</h1>
+                <div class="projects-container">
+                    <div class="project-item-container">
+                        <div class="project-item">
+                            <div class="project-details">
+                                <h2>Weather App</h2>
+                                <div class="buttons-container">
+                                    <button class="live"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="code"><i class="fa-solid fa-code"></i></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-details">
-                        <h2>Seepoint</h2>
-                        <div class="buttons-container">
-                            <button class="live"><i class="fa-solid fa-eye"></i></button>
-                            <button class="code"><i class="fa-solid fa-code"></i></button>
+                    <div class="project-item-container">
+                        <div class="project-item">
+                            <div class="project-details">
+                                <h2>Seepoint</h2>
+                                <div class="buttons-container">
+                                    <button class="live"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="code"><i class="fa-solid fa-code"></i></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-details">
-                        <h2>Football</h2>
-                        <div class="buttons-container">
-                            <button class="live"><i class="fa-solid fa-eye"></i></button>
-                            <button class="code"><i class="fa-solid fa-code"></i></button>
+                    <div class="project-item-container">
+                        <div class="project-item">
+                            <div class="project-details">
+                                <h2>Football</h2>
+                                <div class="buttons-container">
+                                    <button class="live"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="code"><i class="fa-solid fa-code"></i></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-details">
-                        <h2>Todo</h2>
-                        <div class="buttons-container">
-                            <button class="live"><i class="fa-solid fa-eye"></i></button>
-                            <button class="code"><i class="fa-solid fa-code"></i></button>
+                    <div class="project-item-container">
+                        <div class="project-item">
+                            <div class="project-details">
+                                <h2>Todo</h2>
+                                <div class="buttons-container">
+                                    <button class="live"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="code"><i class="fa-solid fa-code"></i></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="contact">
-            <input type="text">
+        <section id="contact" class="container">
+            <h2>Let's be in touch!</h2>
+            <form action="https://formsubmit.co/kamstal95@gmail.com" method="POST">
+                <div class="details">
+                    <div class="details-container">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="details-container">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="textarea">
+                        <textarea name="message" placeholder="Your Message"></textarea>
+                        <button type="submit">Send</button>
+                    </div>
+                </div>
+                <div class="background"></div>
+            </form>
+
         </section>
 
 

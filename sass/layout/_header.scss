@@ -17,9 +17,6 @@ header {
         left: 0;
         right: 0;
         padding: 0 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         height: 100px;
         z-index: 111111;
         transition: .3s;
@@ -30,55 +27,62 @@ header {
             box-shadow: 0 2px 0px $additional-color;
         }
 
-
-
-        .navbar-logo img {
-            width: 60px;
-        }
-
-        .navbar-items {
+        div {
+            height: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            list-style: none;
-            width: 45%;
-            // height: 100%;
 
-            li {
-                height: inherit;
-                // line-height: 100px;
+            .navbar-logo img {
+                width: 60px;
+            }
 
-                a {
-                    position: relative;
-                    height: 100%;
-                    display: inline-block;
-                    font-size: 1.8rem;
-                    color: #010B40;
-                    text-decoration: none;
-                    font-weight: 500;
-                    text-transform: uppercase;
-                    cursor: pointer;
+            .navbar-items {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                list-style: none;
+                width: 45%;
+                // height: 100%;
+
+                li {
+                    height: inherit;
+                    // line-height: 100px;
+
+                    a {
+                        position: relative;
+                        height: 100%;
+                        display: inline-block;
+                        font-size: 1.8rem;
+                        color: #010B40;
+                        text-decoration: none;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        cursor: pointer;
 
 
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        bottom: -5px;
-                        left: 0;
-                        width: 0;
-                        height: 3px;
-                        background-color: $primary-color;
-                        transition: width .2s ease-in;
-                    }
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: -5px;
+                            left: 0;
+                            width: 0;
+                            height: 3px;
+                            background-color: $primary-color;
+                            transition: width .2s ease-in;
+                        }
 
-                    &:hover::after,
-                    &:focus::after,
-                    &:active::after {
-                        width: 100%;
+                        &:hover::after,
+                        &:focus::after,
+                        &:active::after {
+                            width: 100%;
+                        }
                     }
                 }
             }
         }
+
+
 
         #hamburger,
         #close {

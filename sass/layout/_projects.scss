@@ -4,6 +4,8 @@
     color: $additional-color;
     padding: 2rem 0;
     margin-bottom: 4rem;
+    margin: 0 auto;
+
 
     h1 {
         text-align: center;
@@ -22,48 +24,71 @@
         .project-item {
             width: 30rem;
             height: 30rem;
-            background: #ddd;
-            box-shadow: 0 3px 5px rgb(181, 181, 181);
-            border-radius: 30px;
+            background: url('/img/25501.jpg');
+            background-position: center;
+            background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: transform .2s;
+            border-radius: 3rem;
 
 
+            .project-details {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(50, 103, 137, .6);
+                opacity: 0;
+                transition: opacity .2s;
+                border-radius: 3rem;
 
-            h2 {
-                font-size: 3rem;
-                text-align: center;
-            }
 
-            .buttons-container {
-                text-align: center;
-                margin-top: 2rem;
-
-                .live {
-                    margin-right: 1rem;
+                h2 {
+                    font-size: 3rem;
+                    text-align: center;
                 }
 
-                button {
-                    border: none;
-                    background-color: $primary-color;
-                    padding: 1.5rem;
-                    border-radius: 50%;
-                    cursor: pointer;
-                    transition: .2s;
+                .buttons-container {
+                    text-align: center;
+                    margin-top: 2rem;
 
-                    &:hover {
-                        background-color: $secondary-color;
+                    .live {
+                        margin-right: 1rem;
+                    }
+
+                    button {
+                        border: none;
+                        background-color: $primary-color;
+                        padding: 1.5rem;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        transition: .2s;
+
+                        &:hover {
+                            background-color: $secondary-color;
+
+                            i {
+                                color: $additional-color;
+                            }
+                        }
 
                         i {
-                            color: $additional-color;
+                            color: $secondary-color;
+                            font-size: 2rem;
                         }
                     }
+                }
+            }
 
-                    i {
-                        color: $secondary-color;
-                        font-size: 2rem;
-                    }
+            &:hover {
+                transform: translateY(-5px);
+
+                .project-details {
+                    opacity: 1;
                 }
             }
 
