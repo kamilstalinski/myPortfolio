@@ -52,6 +52,18 @@ header .background::before {
   background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(2) rotate(90)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 100%, 0)'/><path d='M-4.798 13.573C-3.149 12.533-1.446 11.306 0 10c2.812-2.758 6.18-4.974 10-5 4.183.336 7.193 2.456 10 5 2.86 2.687 6.216 4.952 10 5 4.185-.315 7.35-2.48 10-5 1.452-1.386 3.107-3.085 4.793-4.176'  stroke-width='4.5' stroke='hsla(5, 75%, 61%, 1)' fill='none'/><path d='M-4.798 33.573C-3.149 32.533-1.446 31.306 0 30c2.812-2.758 6.18-4.974 10-5 4.183.336 7.193 2.456 10 5 2.86 2.687 6.216 4.952 10 5 4.185-.315 7.35-2.48 10-5 1.452-1.386 3.107-3.085 4.793-4.176'  stroke-width='4.5' stroke='hsla(203, 47%, 37%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
   transform: translate(-50%, -50%) rotate(45deg);
 }
+@media (max-width: 992px) {
+  header .background::before {
+    height: 40rem;
+    width: 40rem;
+  }
+}
+@media (max-width: 600px) {
+  header .background::before {
+    height: 28rem;
+    width: 28rem;
+  }
+}
 header .navbar {
   position: fixed;
   top: 0;
@@ -77,21 +89,25 @@ header .navbar div .social-cta {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  height: auto;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  background-color: #fff;
+  border-radius: 3rem;
 }
 header .navbar div .social-cta a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5rem;
-  width: 5rem;
+  height: 3.5rem;
+  width: 3.5rem;
   background-color: #5580A6;
-  margin-right: 2rem;
   border-radius: 50%;
   text-decoration: none;
   transition: 0.2s;
 }
 header .navbar div .social-cta a i {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   color: #F2F2F2;
 }
 header .navbar div .social-cta a#github:hover {
@@ -579,6 +595,35 @@ header .hero .arrow-container:hover {
   #skills .skill-item i {
     font-size: 5rem;
   }
+}
+
+#projects {
+  background-color: #fff;
+  padding: 2rem 0 4rem 0;
+}
+#projects h2 {
+  margin-bottom: 2rem;
+}
+#projects .projects-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+#projects .projects-items .item-container {
+  flex-basis: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#projects .projects-items .item-container .project-item {
+  width: 30rem;
+  height: 30rem;
+  background-color: #ddd;
+}
+#projects .projects-items .item-container .project-item img {
+  width: 50%;
 }
 
 #contact {

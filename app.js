@@ -6,9 +6,6 @@ hamburger.addEventListener('click', () => {
     navbarItems.classList.toggle('active');
 })
 
-// window.addEventListener('scroll', () => {
-//     navbar.classList.toggle('sticky', window.scrollY > 0);
-// })
 
 let prevScrollpos = window.pageYOffset;
 
@@ -17,12 +14,14 @@ window.onscroll = () => {
     if (prevScrollpos > currentScrollPos) {
         navbar.style.top = "0";
         navbar.style.backgroundColor = '#fff'
+        navbar.style.boxShadow = '0 3px 3px #e9eef2'
     } else {
-        navbar.style.top = "-100px";
+        navbar.style.top = "-105px";
     }
 
     if (window.scrollY === 0) {
         navbar.style.removeProperty('background-color')
+        navbar.style.removeProperty('box-shadow')
     }
     prevScrollpos = currentScrollPos;
 }
