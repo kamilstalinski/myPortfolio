@@ -731,7 +731,7 @@ header .hero .arrow-container:hover {
     overflow: auto;
   }
   #contact form .details {
-    z-index: 2222;
+    z-index: 22;
     position: absolute;
     width: 90%;
     top: 40%;
@@ -743,6 +743,7 @@ header .hero .arrow-container:hover {
     align-items: flex-start;
   }
   #contact form .background .message {
+    z-index: 222;
     margin: 3rem;
     width: 15rem;
     height: 10rem;
