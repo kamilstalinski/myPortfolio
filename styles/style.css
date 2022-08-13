@@ -710,7 +710,7 @@ header .hero .arrow-container:hover {
 
 #contact {
   position: relative;
-  height: 70rem;
+  height: 90vh;
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
@@ -867,17 +867,22 @@ header .hero .arrow-container:hover {
   }
 }
 @media (max-width: 600px) {
+  #contact {
+    overflow: visible;
+  }
+  #contact h2 {
+    font-size: 3rem;
+  }
   #contact form {
     width: 100vw;
     height: 100vh;
     margin-bottom: 4rem;
-    overflow: auto;
   }
   #contact form .details {
     z-index: 22;
     position: absolute;
     width: 90%;
-    top: 40%;
+    top: 30%;
     border-radius: 3rem;
   }
   #contact form .background {
