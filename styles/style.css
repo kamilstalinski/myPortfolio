@@ -710,7 +710,7 @@ header .hero .arrow-container:hover {
 
 #contact {
   position: relative;
-  height: 60vh;
+  height: 70rem;
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
@@ -734,6 +734,7 @@ header .hero .arrow-container:hover {
   text-align: start;
 }
 #contact form {
+  height: 50rem;
   width: 85%;
   display: flex;
   flex-direction: row-reverse;
@@ -771,6 +772,7 @@ header .hero .arrow-container:hover {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  height: 100%;
   width: 100%;
 }
 #contact form .details .textarea textarea {
@@ -783,9 +785,12 @@ header .hero .arrow-container:hover {
   font-family: inherit;
 }
 #contact form .details .textarea button {
-  width: 15rem;
+  width: 20rem;
   height: 7rem;
+  font-size: 1.6rem;
+  padding: 1.5rem 3rem;
   align-self: flex-end;
+  color: #fff;
   background-color: #326789;
   border: none;
   border-radius: 3rem;
