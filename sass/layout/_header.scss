@@ -39,7 +39,7 @@ header {
         right: 0;
         padding: 0 40px;
         height: 100px;
-        z-index: 111111;
+        z-index: 4434343434;
         transition: .3s;
 
         &.sticky {
@@ -222,8 +222,8 @@ header {
             bottom: 10%;
             height: 80px;
             width: 80px;
-            transform: rotate(45deg);
             background-color: $background-color;
+            border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -232,14 +232,13 @@ header {
 
             i {
                 font-size: 2.2rem;
-                transform: rotate(-45deg);
                 animation: myAnim 2s ease-in-out infinite normal backwards;
 
                 @keyframes myAnim {
                     0% {
                         animation-timing-function: ease-in;
                         opacity: 0;
-                        transform: rotate(-45deg) translateY(-45px);
+                        transform: translateY(-45px);
                     }
 
                     24% {
@@ -248,22 +247,22 @@ header {
 
                     40% {
                         animation-timing-function: ease-in;
-                        transform: rotate(-45deg) translateY(-24px);
+                        transform: translateY(-24px);
                     }
 
                     65% {
                         animation-timing-function: ease-in;
-                        transform: rotate(-45deg) translateY(-12px);
+                        transform: translateY(-12px);
                     }
 
                     82% {
                         animation-timing-function: ease-in;
-                        transform: rotate(-45deg) translateY(-6px);
+                        transform: translateY(-6px);
                     }
 
                     93% {
                         animation-timing-function: ease-in;
-                        transform: rotate(-45deg) translateY(-4px);
+                        transform: translateY(-4px);
                     }
 
                     25%,
@@ -271,13 +270,13 @@ header {
                     75%,
                     87% {
                         animation-timing-function: ease-out;
-                        transform: rotate(-45deg) translateY(0px);
+                        transform: translateY(0px);
                     }
 
                     100% {
                         animation-timing-function: ease-out;
                         opacity: 1;
-                        transform: rotate(-45deg) translateY(0px);
+                        transform: translateY(0px);
                     }
                 }
             }

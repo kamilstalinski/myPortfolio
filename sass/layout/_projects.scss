@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     position: relative;
 
     h1 {
@@ -28,7 +28,7 @@
 
     .projects-items {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         gap: 2rem;
@@ -39,7 +39,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: .2s;
+            transition: transform .2s;
+
+
 
             &:hover {
                 transform: translateY(-5px);
@@ -117,7 +119,11 @@
             }
         }
 
-
+        @media screen and (max-width: 1290px) {
+            .item-container {
+                flex-basis: 48%;
+            }
+        }
 
     }
 }

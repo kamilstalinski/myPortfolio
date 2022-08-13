@@ -71,7 +71,7 @@ header .navbar {
   right: 0;
   padding: 0 40px;
   height: 100px;
-  z-index: 111111;
+  z-index: 4434343434;
   transition: 0.3s;
 }
 header .navbar.sticky {
@@ -220,8 +220,8 @@ header .hero .arrow-container {
   bottom: 10%;
   height: 80px;
   width: 80px;
-  transform: rotate(45deg);
   background-color: #78a6c8;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -230,7 +230,6 @@ header .hero .arrow-container {
 }
 header .hero .arrow-container i {
   font-size: 2.2rem;
-  transform: rotate(-45deg);
   -webkit-animation: myAnim 2s ease-in-out infinite normal backwards;
           animation: myAnim 2s ease-in-out infinite normal backwards;
 }
@@ -239,7 +238,7 @@ header .hero .arrow-container i {
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
     opacity: 0;
-    transform: rotate(-45deg) translateY(-45px);
+    transform: translateY(-45px);
   }
   24% {
     opacity: 1;
@@ -247,33 +246,33 @@ header .hero .arrow-container i {
   40% {
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
-    transform: rotate(-45deg) translateY(-24px);
+    transform: translateY(-24px);
   }
   65% {
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
-    transform: rotate(-45deg) translateY(-12px);
+    transform: translateY(-12px);
   }
   82% {
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
-    transform: rotate(-45deg) translateY(-6px);
+    transform: translateY(-6px);
   }
   93% {
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
-    transform: rotate(-45deg) translateY(-4px);
+    transform: translateY(-4px);
   }
   25%, 55%, 75%, 87% {
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
-    transform: rotate(-45deg) translateY(0px);
+    transform: translateY(0px);
   }
   100% {
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
     opacity: 1;
-    transform: rotate(-45deg) translateY(0px);
+    transform: translateY(0px);
   }
 }
 @keyframes myAnim {
@@ -281,7 +280,7 @@ header .hero .arrow-container i {
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
     opacity: 0;
-    transform: rotate(-45deg) translateY(-45px);
+    transform: translateY(-45px);
   }
   24% {
     opacity: 1;
@@ -289,33 +288,33 @@ header .hero .arrow-container i {
   40% {
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
-    transform: rotate(-45deg) translateY(-24px);
+    transform: translateY(-24px);
   }
   65% {
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
-    transform: rotate(-45deg) translateY(-12px);
+    transform: translateY(-12px);
   }
   82% {
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
-    transform: rotate(-45deg) translateY(-6px);
+    transform: translateY(-6px);
   }
   93% {
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
-    transform: rotate(-45deg) translateY(-4px);
+    transform: translateY(-4px);
   }
   25%, 55%, 75%, 87% {
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
-    transform: rotate(-45deg) translateY(0px);
+    transform: translateY(0px);
   }
   100% {
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
     opacity: 1;
-    transform: rotate(-45deg) translateY(0px);
+    transform: translateY(0px);
   }
 }
 header .hero .arrow-container:hover {
@@ -352,7 +351,7 @@ header .hero .arrow-container:hover {
 #about .img {
   position: relative;
   width: 50%;
-  height: 800px;
+  height: 70vh;
   background-image: url("/img/_DSC5212.JPG");
   background-size: cover;
   background-position: center;
@@ -395,15 +394,18 @@ header .hero .arrow-container:hover {
   font-weight: 700;
   color: #010B40;
   position: relative;
+  z-index: 1;
 }
 #about .about-me h1::before {
   content: "";
-  height: 5px;
+  width: 12rem;
   position: absolute;
+  top: 0;
   bottom: 0;
-  left: 0;
-  right: 0;
+  left: -2rem;
   background-color: #E65c4f;
+  border-radius: 3rem;
+  z-index: -1;
 }
 #about .about-me p {
   font-size: 2rem;
@@ -444,7 +446,7 @@ header .hero .arrow-container:hover {
   background-color: #326789;
   border: none;
   border-radius: 20px;
-  transition: 0.3s;
+  transition: 0.2s;
   margin-right: 4rem;
 }
 #about .about-me .about-cta a:hover {
@@ -601,7 +603,7 @@ header .hero .arrow-container:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   position: relative;
 }
 #projects h1 {
@@ -622,7 +624,7 @@ header .hero .arrow-container:hover {
 }
 #projects .projects-items {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
@@ -633,7 +635,7 @@ header .hero .arrow-container:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.2s;
+  transition: transform 0.2s;
 }
 #projects .projects-items .item-container:hover {
   transform: translateY(-5px);
@@ -700,10 +702,15 @@ header .hero .arrow-container:hover {
   opacity: 1;
   background-color: rgba(50, 103, 137, 0.9);
 }
+@media screen and (max-width: 1290px) {
+  #projects .projects-items .item-container {
+    flex-basis: 48%;
+  }
+}
 
 #contact {
   position: relative;
-  height: 70rem;
+  height: 60vh;
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
@@ -727,7 +734,6 @@ header .hero .arrow-container:hover {
   text-align: start;
 }
 #contact form {
-  height: 50rem;
   width: 85%;
   display: flex;
   flex-direction: row-reverse;
@@ -739,7 +745,7 @@ header .hero .arrow-container:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 2.5rem;
   background-color: #E65c4f;
   padding: 4rem;
   border-radius: 0 3rem 3rem 0;
@@ -764,8 +770,7 @@ header .hero .arrow-container:hover {
 #contact form .details .textarea {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  height: 100%;
+  gap: 2.5rem;
   width: 100%;
 }
 #contact form .details .textarea textarea {
@@ -779,12 +784,12 @@ header .hero .arrow-container:hover {
 }
 #contact form .details .textarea button {
   width: 15rem;
-  font-size: 1.6rem;
-  padding: 1.5rem 3rem;
+  height: 7rem;
   align-self: flex-end;
-  color: #fff;
   background-color: #326789;
   border: none;
+  border-radius: 3rem;
+  cursor: pointer;
 }
 #contact form .background {
   display: flex;
