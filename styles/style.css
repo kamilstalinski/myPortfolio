@@ -430,27 +430,24 @@ header .hero .arrow-container:hover {
   display: flex;
   justify-content: flex-start;
 }
-#about .about-me .about-cta button {
+#about .about-me .about-cta a {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
   width: 200px;
   height: 70px;
+  line-height: 70px;
   background-color: #326789;
   border: none;
   border-radius: 20px;
   transition: 0.3s;
   margin-right: 4rem;
 }
-#about .about-me .about-cta button a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  line-height: 70px;
-  font-size: 1.6rem;
-  font-weight: 700;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #fff;
-}
-#about .about-me .about-cta button:hover {
+#about .about-me .about-cta a:hover {
   background-color: #E65c4f;
   box-shadow: 0 0 10px rgb(207, 207, 207);
 }
@@ -618,10 +615,10 @@ header .hero .arrow-container:hover {
   position: absolute;
   left: 0;
   right: 0;
-  top: 16rem;
-  height: 4rem;
+  bottom: 0;
+  height: 30rem;
   background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 100%, 0)'/><path d='M-4.798 13.573C-3.149 12.533-1.446 11.306 0 10c2.812-2.758 6.18-4.974 10-5 4.183.336 7.193 2.456 10 5 2.86 2.687 6.216 4.952 10 5 4.185-.315 7.35-2.48 10-5 1.452-1.386 3.107-3.085 4.793-4.176'  stroke-width='4.5' stroke='hsla(5, 75%, 61%, 1)' fill='none'/><path d='M-4.798 33.573C-3.149 32.533-1.446 31.306 0 30c2.812-2.758 6.18-4.974 10-5 4.183.336 7.193 2.456 10 5 2.86 2.687 6.216 4.952 10 5 4.185-.315 7.35-2.48 10-5 1.452-1.386 3.107-3.085 4.793-4.176'  stroke-width='4.5' stroke='hsla(203, 47%, 37%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
-  z-index: -2;
+  z-index: -100000;
 }
 #projects .projects-items {
   display: flex;
@@ -629,12 +626,17 @@ header .hero .arrow-container:hover {
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
+  z-index: 111111;
 }
 #projects .projects-items .item-container {
   flex-basis: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.2s;
+}
+#projects .projects-items .item-container:hover {
+  transform: translateY(-5px);
 }
 #projects .projects-items .item-container .project-item {
   position: relative;
@@ -667,6 +669,7 @@ header .hero .arrow-container:hover {
 }
 #projects .projects-items .item-container .project-item .project-item-details h2 {
   font-size: 3rem;
+  color: #fff;
 }
 #projects .projects-items .item-container .project-item .project-item-details .project-item-links {
   display: flex;
@@ -695,7 +698,7 @@ header .hero .arrow-container:hover {
 }
 #projects .projects-items .item-container .project-item .project-item-details:hover {
   opacity: 1;
-  background-color: rgba(230, 92, 79, 0.8);
+  background-color: rgba(50, 103, 137, 0.9);
 }
 
 #contact {
