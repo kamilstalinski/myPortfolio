@@ -203,26 +203,31 @@
     }
 
     @include size('small') {
-        margin-top: 3rem;
+        flex-direction: column;
+        height: auto;
 
         .img {
-            display: none;
+            margin-top: 1rem;
+            width: 100%;
+            border-radius: 3rem;
         }
+
 
         .about-me {
             width: 100%;
-            padding: 2rem;
+            padding: 3rem;
             justify-content: center;
             align-items: center;
             gap: 2rem;
+            background-color: $additional-color;
+            border-radius: 3rem;
 
-            p {
-                text-align: center;
-                padding: 0 1rem;
+            h1 {
+                align-self: flex-start;
             }
 
             .about-info {
-                justify-content: space-around;
+                justify-content: space-between;
 
                 ul {
                     li {
