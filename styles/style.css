@@ -158,28 +158,27 @@ header .navbar #close {
   z-index: 10;
 }
 @media (max-width: 992px) {
-  header .navbar .navbar-items {
-    padding: 10%;
+  header .navbar div .navbar-items {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    width: 60vw;
+    height: 100vh;
+    padding: 3.5rem;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 3rem;
-    background-color: #E65c4f;
-    position: absolute;
-    top: 0;
-    right: -100%;
-    z-index: 1;
-    width: 80vw;
-    height: 100vh;
-    transition: right 0.3s ease-in-out;
+    background-color: #0A66C2;
+    transition: right 0.2s;
   }
-  header .navbar .navbar-items li {
+  header .navbar div .navbar-items li {
     height: 50px;
   }
-  header .navbar .navbar-items li a {
+  header .navbar div .navbar-items li a {
     font-size: 2.2rem;
   }
-  header .navbar .navbar-items.active {
+  header .navbar div .navbar-items.active {
     right: 0;
   }
   header .navbar #hamburger {
@@ -351,7 +350,7 @@ header .hero .arrow-container:hover {
 #about .img {
   position: relative;
   width: 50%;
-  height: 70vh;
+  height: 70rem;
   background-image: url("/img/_DSC5212.JPG");
   background-size: cover;
   background-position: center;
@@ -726,6 +725,7 @@ header .hero .arrow-container:hover {
 @media (max-width: 600px) {
   #projects h1 {
     font-size: 4rem;
+    margin: 3rem;
   }
 }
 

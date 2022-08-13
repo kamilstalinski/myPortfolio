@@ -147,31 +147,33 @@ header {
         }
 
         @include size('medium') {
-            .navbar-items {
-                padding: 10%;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-                gap: 3rem;
-                background-color: $primary-color;
-                position: absolute;
-                top: 0;
-                right: -100%;
-                z-index: 1;
-                width: 80vw;
-                height: 100vh;
-                transition: right .3s ease-in-out;
+            div {
+                .navbar-items {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: -100%;
+                    width: 60vw;
+                    height: 100vh;
+                    padding: 3.5rem;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    background-color: #0A66C2;
+                    transition: right .2s;
 
-                li {
-                    height: 50px;
 
-                    a {
-                        font-size: 2.2rem;
+                    li {
+                        height: 50px;
+
+                        a {
+                            font-size: 2.2rem;
+                        }
                     }
-                }
 
-                &.active {
-                    right: 0;
+                    &.active {
+                        right: 0;
+                    }
                 }
             }
 

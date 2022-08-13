@@ -148,9 +148,12 @@
         }
     }
 
+    @include size ('medium') {}
+
     @include size('small') {
         h1 {
             font-size: 4rem;
+            margin: 3rem;
         }
     }
 }
