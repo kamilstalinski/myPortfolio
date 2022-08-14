@@ -67,7 +67,7 @@ h3 {
 
 .navbar {
   position: fixed;
-  top: -85px;
+  top: 0;
   left: 0;
   right: 0;
   padding: 0 40px;
