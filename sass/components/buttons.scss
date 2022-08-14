@@ -1,0 +1,35 @@
+.social-cta {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5rem;
+        width: 5rem;
+        background-color: #5580A6;
+        margin-right: 2rem;
+        border-radius: 50%;
+        text-decoration: none;
+        transition: .2s;
+
+        i {
+            font-size: 2.2rem;
+            color: #F2F2F2;
+        }
+
+        &.linkedin {
+            margin-right: 0;
+        }
+
+        &.github:hover {
+            background-color: #6e5494;
+        }
+
+        &.linkedin:hover {
+            background-color: #0A66C2;
+        }
+    }
+}

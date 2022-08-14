@@ -57,6 +57,7 @@
             color: #010B40;
             position: relative;
             z-index: 1;
+            justify-self: flex-start;
 
             &::before {
                 content: '';
@@ -147,18 +148,16 @@
                         color: #F2F2F2;
                     }
 
-                    &#linkedin {
+                    &.linkedin {
                         margin-right: 0;
                     }
 
-                    &#github:hover {
+                    &.github:hover {
                         background-color: #6e5494;
-                        box-shadow: 0 0 10px rgb(207, 207, 207);
                     }
 
-                    &#linkedin:hover {
+                    &.linkedin:hover {
                         background-color: #0A66C2;
-                        box-shadow: 0 0 10px rgb(207, 207, 207);
                     }
                 }
             }

@@ -5,7 +5,7 @@ const navbarItems = document.querySelector('.navbar-items');
 hamburger.addEventListener('click', () => {
     navbarItems.classList.toggle('active');
     hamburger.classList.toggle('active');
-    hamburger.classList.toggle('not-active')
+    burger.classList.toggle('not-active')
 
 });
 

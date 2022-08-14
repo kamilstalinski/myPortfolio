@@ -32,320 +32,142 @@ header {
         }
     }
 
-    .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        padding: 0 40px;
-        height: 100px;
-        z-index: 4434343434;
-        transition: .3s;
 
-        &.sticky {
-            background-color: #fff;
-            height: 80px;
-            box-shadow: 0 2px 0px $additional-color;
+
+}
+
+.hero {
+    height: calc(100vh);
+    transform: translateY(-100px);
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    letter-spacing: 2px;
+    text-align: center;
+
+    p {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: $primary-color;
+        text-transform: uppercase;
+    }
+
+    h1 {
+        // text-transform: uppercase;
+        font-size: 7rem;
+        color: #010326;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+        color: #010326;
+
+        span {
+            color: $primary-color;
+
         }
+    }
 
-        div {
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+    .arrow-container {
+        position: absolute;
+        bottom: 10%;
+        height: 80px;
+        width: 80px;
+        background-color: $background-color;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color .2s ease-in-out;
 
-            .social-cta {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                height: auto;
-                padding: 1.5rem;
-                gap: 1.5rem;
-                background-color: #fff;
-                border-radius: 3rem;
-                transform: translateX(-15px);
+        i {
+            font-size: 2.2rem;
+            animation: myAnim 2s ease-in-out infinite normal backwards;
 
-
-                a {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 3.5rem;
-                    width: 3.5rem;
-                    background-color: #5580A6;
-                    border-radius: 50%;
-                    text-decoration: none;
-                    transition: .2s;
-
-                    i {
-                        font-size: 1.8rem;
-                        color: #F2F2F2;
-                    }
-
-                    &#github:hover {
-                        background-color: #6e5494;
-                    }
-
-                    &#linkedin:hover {
-                        background-color: #0A66C2;
-                    }
+            @keyframes myAnim {
+                0% {
+                    animation-timing-function: ease-in;
+                    opacity: 0;
+                    transform: translateY(-45px);
                 }
-            }
 
-            .navbar-items {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                list-style: none;
-                width: 45%;
-                // height: 100%;
-
-                li {
-                    height: inherit;
-                    // line-height: 100px;
-
-                    a {
-                        position: relative;
-                        height: 100%;
-                        display: inline-block;
-                        font-size: 1.8rem;
-                        color: #010B40;
-                        text-decoration: none;
-                        font-weight: 500;
-                        text-transform: uppercase;
-                        cursor: pointer;
-
-
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            bottom: -5px;
-                            left: 0;
-                            width: 0;
-                            height: 3px;
-                            background-color: $primary-color;
-                            transition: width .2s ease-in;
-                        }
-
-                        &:hover::after,
-                        &:focus::after,
-                        &:active::after {
-                            width: 100%;
-                        }
-                    }
+                24% {
+                    opacity: 1;
                 }
-            }
 
-            .hamburger {
-                display: none;
-                width: 80px;
-                cursor: pointer;
+                40% {
+                    animation-timing-function: ease-in;
+                    transform: translateY(-24px);
+                }
 
-                span {
-                    display: block;
-                    width: 33px;
-                    height: 4px;
-                    margin-bottom: 5px;
-                    position: relative;
-                    background: #010326;
-                    border-radius: 3px;
-                    z-index: 1;
-                    transform-origin: 4px 0px;
-                    transition: all .3s;
+                65% {
+                    animation-timing-function: ease-in;
+                    transform: translateY(-12px);
+                }
+
+                82% {
+                    animation-timing-function: ease-in;
+                    transform: translateY(-6px);
+                }
+
+                93% {
+                    animation-timing-function: ease-in;
+                    transform: translateY(-4px);
+                }
+
+                25%,
+                55%,
+                75%,
+                87% {
+                    animation-timing-function: ease-out;
+                    transform: translateY(0px);
+                }
+
+                100% {
+                    animation-timing-function: ease-out;
+                    opacity: 1;
+                    transform: translateY(0px);
                 }
             }
         }
 
-
-
-
-
-        @include size('medium') {
-            div {
-                .navbar-items {
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    right: -100%;
-                    width: 60vw;
-                    height: 100vh;
-                    padding: 3.5rem;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: flex-start;
-                    background-color: #326789;
-                    transition: right .2s;
-
-
-                    li {
-                        height: 50px;
-
-                        a {
-                            font-size: 2.2rem;
-                            color: $additional-color;
-
-                            &::after {
-                                display: none;
-                            }
-                        }
-                    }
-
-                    &.active {
-                        right: 0;
-                    }
-                }
-
-                .hamburger {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                }
-            }
-
-
+        &:hover {
+            background-color: $primary-color;
         }
+
 
     }
 
-    .hero {
-        height: calc(100vh);
-        transform: translateY(-100px);
-        padding: 0 5%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-        letter-spacing: 2px;
-        text-align: center;
-
+    @include size('medium') {
         p {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: $primary-color;
-            text-transform: uppercase;
+            font-size: 1.8rem;
         }
 
         h1 {
-            // text-transform: uppercase;
-            font-size: 7rem;
-            color: #010326;
+            font-size: 6rem;
         }
 
         h2 {
-            font-size: 3.5rem;
-            color: #010326;
-
-            span {
-                color: $primary-color;
-
-            }
-
-            &::after {
-                display: none;
-            }
+            font-size: 2.8rem;
         }
 
-        .arrow-container {
-            position: absolute;
-            bottom: 10%;
-            height: 80px;
-            width: 80px;
-            background-color: $background-color;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: background-color .2s ease-in-out;
-
-            i {
-                font-size: 2.2rem;
-                animation: myAnim 2s ease-in-out infinite normal backwards;
-
-                @keyframes myAnim {
-                    0% {
-                        animation-timing-function: ease-in;
-                        opacity: 0;
-                        transform: translateY(-45px);
-                    }
-
-                    24% {
-                        opacity: 1;
-                    }
-
-                    40% {
-                        animation-timing-function: ease-in;
-                        transform: translateY(-24px);
-                    }
-
-                    65% {
-                        animation-timing-function: ease-in;
-                        transform: translateY(-12px);
-                    }
-
-                    82% {
-                        animation-timing-function: ease-in;
-                        transform: translateY(-6px);
-                    }
-
-                    93% {
-                        animation-timing-function: ease-in;
-                        transform: translateY(-4px);
-                    }
-
-                    25%,
-                    55%,
-                    75%,
-                    87% {
-                        animation-timing-function: ease-out;
-                        transform: translateY(0px);
-                    }
-
-                    100% {
-                        animation-timing-function: ease-out;
-                        opacity: 1;
-                        transform: translateY(0px);
-                    }
-                }
-            }
-
-            &:hover {
-                background-color: $primary-color;
-            }
-
-
-        }
-
-        @include size('medium') {
-            p {
-                font-size: 1.8rem;
-            }
-
-            h1 {
-                font-size: 6rem;
-            }
-
-            h2 {
-                font-size: 2.8rem;
-            }
-
-        }
-
-        @include size('small') {
-            p {
-                font-size: 1.6rem;
-            }
-
-            h1 {
-                font-size: 4.8rem;
-            }
-
-            h2 {
-                font-size: 2.2rem;
-            }
-        }
     }
 
+    @include size('small') {
+        p {
+            font-size: 1.6rem;
+        }
+
+        h1 {
+            font-size: 4.8rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+        }
+    }
 }

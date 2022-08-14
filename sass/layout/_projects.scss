@@ -1,11 +1,9 @@
 #projects {
-    background-color: #fff;
-    padding: 2rem 0 10rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+    background-color: $background-color;
     position: relative;
+    padding-top: 5rem;
+
+
 
     &::before {
         content: '';
@@ -19,6 +17,7 @@
     }
 
     h2 {
+        margin: 0 5rem;
         font-size: 6rem;
         font-weight: 700;
         color: #010B40;
@@ -40,6 +39,7 @@
 
 
     .projects-items {
+        min-height: 50rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -56,6 +56,7 @@
 
 
 
+
             &:hover {
                 transform: translateY(-5px);
             }
@@ -64,12 +65,12 @@
                 position: relative;
                 width: 30rem;
                 height: 30rem;
-                background-color: #ddd;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 overflow: hidden;
                 border-radius: 3rem;
+                box-shadow: 0 3px 10px $secondary-color;
 
 
                 img {
@@ -90,7 +91,9 @@
                     opacity: 0;
                     transition: .2s all;
 
-
+                    h3 {
+                        color: #010B40;
+                    }
 
                     .project-item-links {
                         display: flex;
@@ -107,6 +110,7 @@
                             border-radius: 3rem;
                             text-decoration: none;
                             color: #fff;
+                            transition: background-color .2s;
 
                             i {
                                 text-align: center;
@@ -115,15 +119,14 @@
                             }
 
                             &:hover {
-                                background-color: #fff;
-                                color: $background-color;
+                                background-color: $secondary-color;
                             }
                         }
                     }
 
                     &:hover {
                         opacity: 1;
-                        background-color: rgba(50, 103, 137, 0.9);
+                        background-color: rgba(255, 255, 255, 0.7);
                     }
                 }
             }
@@ -142,7 +145,6 @@
                     .project-item-details {
                         h3 {
                             font-size: 2.5rem;
-                            color: #fff;
                         }
                     }
                 }
@@ -150,8 +152,8 @@
         }
     }
 
-    @include size('small') {
-        h1 {
+    @include size('medium') {
+        h2 {
             font-size: 4rem;
         }
     }

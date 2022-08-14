@@ -1,9 +1,12 @@
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
+@import 'utilities/variables';
+@import 'utilities/mixins';
 
 @import 'core/global';
 @import 'core/typography';
 
+@import 'components/buttons.scss';
+
+@import 'layout/navigation';
 @import 'layout/header';
 @import 'layout/about';
 @import 'layout/skills';
