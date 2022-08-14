@@ -151,11 +151,22 @@ header .navbar div .navbar-items li a::after {
 header .navbar div .navbar-items li a:hover::after, header .navbar div .navbar-items li a:focus::after, header .navbar div .navbar-items li a:active::after {
   width: 100%;
 }
-header .navbar #hamburger,
-header .navbar #close {
-  font-size: 2.6rem;
+header .navbar div .hamburger {
   display: none;
-  z-index: 10;
+  width: 80px;
+  cursor: pointer;
+}
+header .navbar div .hamburger span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #010326;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: all 0.3s;
 }
 @media (max-width: 992px) {
   header .navbar div .navbar-items {
@@ -185,8 +196,11 @@ header .navbar #close {
   header .navbar div .navbar-items.active {
     right: 0;
   }
-  header .navbar #hamburger {
-    display: block;
+  header .navbar div .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 header .hero {
@@ -217,6 +231,9 @@ header .hero h2 {
 }
 header .hero h2 span {
   color: #E65c4f;
+}
+header .hero h2::after {
+  display: none;
 }
 header .hero .arrow-container {
   position: absolute;
@@ -392,14 +409,14 @@ header .hero .arrow-container:hover {
   z-index: 11221;
   border-radius: 3rem 0 3rem 3rem;
 }
-#about .about-me h1 {
+#about .about-me h2 {
   font-size: 6rem;
   font-weight: 700;
   color: #010B40;
   position: relative;
   z-index: 1;
 }
-#about .about-me h1::before {
+#about .about-me h2::before {
   content: "";
   width: 12rem;
   position: absolute;
@@ -498,7 +515,7 @@ header .hero .arrow-container:hover {
   #about .about-me {
     padding: 3rem;
   }
-  #about .about-me h1 {
+  #about .about-me h2 {
     font-size: 4rem;
     font-weight: 700;
     color: #010B40;
@@ -625,14 +642,14 @@ header .hero .arrow-container:hover {
   height: 40rem;
   background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 100%, 0)'/><path d='M-4.798 13.573C-3.149 12.533-1.446 11.306 0 10c2.812-2.758 6.18-4.974 10-5 4.183.336 7.193 2.456 10 5 2.86 2.687 6.216 4.952 10 5 4.185-.315 7.35-2.48 10-5 1.452-1.386 3.107-3.085 4.793-4.176'  stroke-width='4.5' stroke='hsla(5, 75%, 61%, 1)' fill='none'/><path d='M-4.798 33.573C-3.149 32.533-1.446 31.306 0 30c2.812-2.758 6.18-4.974 10-5 4.183.336 7.193 2.456 10 5 2.86 2.687 6.216 4.952 10 5 4.185-.315 7.35-2.48 10-5 1.452-1.386 3.107-3.085 4.793-4.176'  stroke-width='4.5' stroke='hsla(203, 47%, 37%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
 }
-#projects h1 {
-  margin: 6rem;
-  align-self: flex-start;
-  display: block;
-  z-index: 22;
+#projects h2 {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #010B40;
   position: relative;
+  z-index: 1;
 }
-#projects h1::after {
+#projects h2::before {
   content: "";
   width: 12rem;
   position: absolute;
@@ -690,10 +707,6 @@ header .hero .arrow-container:hover {
   opacity: 0;
   transition: 0.2s all;
 }
-#projects .projects-items .item-container .project-item .project-item-details h2 {
-  font-size: 3rem;
-  color: #fff;
-}
 #projects .projects-items .item-container .project-item .project-item-details .project-item-links {
   display: flex;
   align-items: center;
@@ -728,11 +741,14 @@ header .hero .arrow-container:hover {
     height: 25rem;
     width: 25rem;
   }
+  #projects .projects-items .item-container .project-item .project-item-details h3 {
+    font-size: 2.5rem;
+    color: #fff;
+  }
 }
 @media (max-width: 600px) {
   #projects h1 {
     font-size: 4rem;
-    margin: 3rem;
   }
 }
 

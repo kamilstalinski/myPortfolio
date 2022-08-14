@@ -1,10 +1,18 @@
-const hamburger = document.getElementById('hamburger');
+const hamburger = document.querySelector('.hamburger');
 const navbar = document.querySelector('.navbar');
 const navbarItems = document.querySelector('.navbar-items');
 
 hamburger.addEventListener('click', () => {
     navbarItems.classList.toggle('active');
-})
+    hamburger.classList.toggle('active');
+    hamburger.classList.toggle('not-active')
+
+});
+
+
+
+
+console.log(navbar)
 
 
 let prevScrollpos = window.pageYOffset;
