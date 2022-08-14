@@ -8,11 +8,6 @@ hamburger.addEventListener('click', () => {
 });
 
 
-
-
-console.log(navbar)
-
-
 let prevScrollpos = window.pageYOffset;
 
 window.onscroll = () => {
