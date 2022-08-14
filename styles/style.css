@@ -1,5 +1,6 @@
 /** Colors **/
 /**Breakpoints**/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -612,7 +613,6 @@ header .background::before {
   margin: 4rem 0;
 }
 #skills .skills-info {
-  height: 100%;
   gap: 1.5rem;
   display: flex;
   flex-wrap: nowrap;
