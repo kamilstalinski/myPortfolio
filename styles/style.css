@@ -17,6 +17,12 @@ html {
 body {
   background-color: #e9eef2;
   color: #010326;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .container {
