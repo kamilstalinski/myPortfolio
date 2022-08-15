@@ -1,11 +1,19 @@
 const hamburger = document.querySelector('.hamburger');
 const navbar = document.querySelector('.navbar');
 const navbarItems = document.querySelector('.navbar-items');
+const navbarItem = document.querySelectorAll('.navbar-item');
 
 hamburger.addEventListener('click', () => {
     navbarItems.classList.toggle('active');
-    hamburger.classList.toggle('active');
+
 });
+
+navbarItem.forEach(item => {
+    item.addEventListener('click', () => {
+        navbarItems.classList.toggle('active')
+        hamburger.classList.toggle('active');
+    })
+})
 
 
 let prevScrollpos = window.pageYOffset;

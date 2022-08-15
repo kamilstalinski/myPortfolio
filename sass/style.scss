@@ -4,7 +4,9 @@
 @import 'core/global';
 @import 'core/typography';
 
-@import 'components/buttons.scss';
+@import 'components/buttons';
+@import 'components/form';
+@import 'components/hamburger';
 
 @import 'layout/navigation';
 @import 'layout/header';
