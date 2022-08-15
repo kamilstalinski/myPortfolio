@@ -5,7 +5,7 @@ const navbarItem = document.querySelectorAll('.navbar-item');
 
 hamburger.addEventListener('click', () => {
     navbarItems.classList.toggle('active');
-
+    hamburger.classList.toggle('active');
 });
 
 navbarItem.forEach(item => {
