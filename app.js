@@ -10,8 +10,8 @@ hamburger.addEventListener('click', () => {
 
 navbarItem.forEach(item => {
     item.addEventListener('click', () => {
-        navbarItems.classList.toggle('active')
-        hamburger.classList.toggle('active');
+        navbarItems.classList.remove('active')
+        hamburger.classList.remove('active');
     })
 })
 
